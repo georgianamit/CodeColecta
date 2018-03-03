@@ -1,4 +1,7 @@
-<?php include_once("includes/header.php"); ?>
+<?php
+  include_once("includes/header.php");
+  include_once("includes/navigation.php");
+?>
 
 
     <div class="container" style="padding-top: 50px;">

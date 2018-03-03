@@ -9,3 +9,19 @@
  body{
    background-color: #e6ffff;
  }
+
+ .thumbnail{
+   display: block;
+   border-radius: 50%;
+ }
+.pic-thumbnail{
+  width: 80px;
+  height: 80px;
+}
+
+.jumbotron{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
