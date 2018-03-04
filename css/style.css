@@ -23,6 +23,9 @@
   padding-bottom: 10px;
 }
 #post-title{
+  color: grey;
+}
+#post-by{
   color: blue;
 }
 #post-content{
