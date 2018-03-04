@@ -8,11 +8,11 @@
         <div class="col-md-7">
           <!-- title and time -->
           <h5>How to make a media player in java</h5>
-          <h6>Amit Rawat</h6>
+          <h6 id="post-title">Amit Rawat</h6>
         </div>
         <div class="col-md-2 text-center">
           <!-- language -->
-          <p class="text-center">java</p>
+          <p class="text-center">Java</p>
         </div>
         <div class="col-md-1 text-center">
           <!-- show menu (...) -->
@@ -20,28 +20,23 @@
         </div>
       </div>
       <div class="row">
-        <hr/>
-        <div class="col-sm-12">
+        <div class="col-sm-12" id="post-content">
           <!-- content -->
           JMF 2.1 is the latest version, and that was released a long time ago. JMF will probably not support all codec formats. That is probably why you are not able to play the file. There are also a lot of codec licensing issues.
 
           There is a JMF performance pack for windows & *nix which will support more codecs than the default installation. Try that. If that doesn't work take a look at ffmpeg or VLC-J.
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-4 text-center">
-          <!-- upvote -->
-          <p class="text-center">23</p>
-        </div>
+      <div class="row" style="border-bottom: 1px solid grey;">
         <div class="col-sm-4">
-          <!-- downvote -->
-          <p class="text-center">5</p>
+          <span class="	glyphicon glyphicon-arrow-up"></span><span class="budge">23</span>
         </div>
-        <div class="col-sm-4 text-center">
-          <!-- comment -->
-          <p class="text-center">comments</p>
+        <div class="col-sm-4" style="border-left: 1px solid grey; border-right: 1px solid grey;">
+          <span class="glyphicon glyphicon-arrow-down"></span><span class="budge">5</span>
         </div>
-
+        <div class="col-sm-4" style="border-right: 1px solid grey;">
+          <span class="	glyphicon glyphicon-comment" ></span><span class="budge">45</span>
+        </div>
       </div>
   </div>
 </div>
