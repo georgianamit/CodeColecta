@@ -7,8 +7,8 @@
         </div>
         <div class="col-md-7">
           <!-- title and time -->
-          <h5>How to make a media player in java</h5>
-          <h6 id="post-title">Amit Rawat</h6>
+          <h5 id="post-title">How to make a media player in java</h5>
+          <h6 id="post-by">Amit Rawat</h6>
         </div>
         <div class="col-md-2 text-center">
           <!-- language -->
