@@ -2,9 +2,10 @@
   include_once("includes/header.php");
   include_once("includes/navigation.php");
   include_once("includes/login_user.php");
+  session_start();
 ?>
 
-
+<?php if(!isset($_SESSION['username'])){ ?>
     <div class="container" style="padding-top: 50px;">
         <div class="row">
             <div class="col-sm-5">
@@ -107,6 +108,9 @@
             </div>
         </div>
     </div>
+<?php }else{
+  header("location: home.php");
+} ?>
 
 
 <?php include_once("includes/footer.php"); ?>
