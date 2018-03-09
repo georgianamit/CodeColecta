@@ -12,13 +12,13 @@
                 <form method="post" action="index.php">
                     <h3>Sign Up</h3>
                     <hr>
-                    <?php if(isset($error)){
+                    <?php if(isset($signup_error)){
                       echo "<div class='alert alert-danger'>$error</div>";
                     }
                     ?>
                     <div class="form-group">
-                      <label for="username">Username</label>
-                      <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                      <label for="signup-username">Username</label>
+                      <input type="text" class="form-control" id="signup-username" name="signup-username" placeholder="Username">
                     </div>
                     <div class="form-group">
                       <label for="signup-email">Email</label>
@@ -68,7 +68,7 @@
                         </div>
                       </div>
                     </div>
-                  <button type="submit" class="btn btn-primary" name="signup">Sign Up</button>
+                  <button type="submit" class="btn btn-primary" name="signup">Sign up</button>
                 </form>
               </div>
             </div>
@@ -79,11 +79,19 @@
               <div class="alert alert-success">
                 <h3>Sign In</h3>
                 <hr>
-                <form>
-                  <div class="form-group">
+                <?php if(isset($signin_error)){
+                  echo "<div class='alert alert-danger'>$signin_error</div>";
+                }
+                ?>
+                <form method="post" action="index.php">
+                  <!-- <div class="form-group">
                     <label for="signin-email">Email address</label>
                     <input type="email" class="form-control" id="signin-email" name="signin-email" aria-describedby="emailHelp" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div> -->
+                  <div class="form-group">
+                    <label for="signin-username">Username</label>
+                    <input type="text" class="form-control" id="signin-username" name="signin-username" placeholder="Username">
                   </div>
                   <div class="form-group">
                     <label for="signin-password">Password</label>
@@ -93,7 +101,7 @@
                     <input type="checkbox" class="form-check-input" id="rememberme">
                     <label class="form-check-label" for="rememberme">Remember me</label>
                   </div>
-                  <button type="submit" class="btn btn-primary" name="signin">Sign In</button>
+                  <button type="submit" class="btn btn-primary" name="signin">Sign in</button>
                 </form>
               </div>
             </div>

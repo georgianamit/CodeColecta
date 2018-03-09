@@ -1,8 +1,10 @@
 <?php
   include_once("includes/header.php");
   include_once("includes/navigation.php")
+  session_start();
 ?>
-
+<? php
+if(isset($_SESSION['username'])){ ?>
 <div class="container" style="padding-top: 20px;">
   <div class="row">
     <div class="col-sm-8">
@@ -17,5 +19,11 @@
     </div>
   </div>
 </div>
+<?php }else{
+
+
+?>
+<?php
+} ?>
 
 <?php include_once("includes/footer.php");?>
