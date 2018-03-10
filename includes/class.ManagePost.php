@@ -33,5 +33,5 @@ class ManagePosts
       return $rowcount;
     }
   }
-  
+}  
 ?>
