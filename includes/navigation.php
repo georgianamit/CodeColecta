@@ -5,6 +5,7 @@
 </button>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<?php if(isset($_SESSION['username'])){ ?>
     <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
         <a class="nav-link" href="#">Home</a>
@@ -24,13 +25,15 @@
         <a class="dropdown-item" href="#">Settings</a>
 
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Logout</a>
+        <a class="dropdown-item" href="includes/logout.php">Logout</a>
         </div>
     </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+<?php } ?>
+    <form class="form-inline my-2 my-lg-0" style="float: right;">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
 </div>
+
 </nav>

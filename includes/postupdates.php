@@ -29,7 +29,7 @@
       </div>
       <div class="row" style="border-bottom: 1px solid grey;">
         <div class="col-sm-4">
-          <span class="	glyphicon glyphicon-arrow-up"></span><span class="budge">23</span>
+          <span class= "glyphicon glyphicon-arrow-up"></span><span class="budge">23</span>
         </div>
         <div class="col-sm-4" style="border-left: 1px solid grey; border-right: 1px solid grey;">
           <span class="glyphicon glyphicon-arrow-down"></span><span class="budge">5</span>
