@@ -1,4 +1,5 @@
 <?php
+
   if(isset($_POST['post'])){
     include_once('class.ManagePost.php');
     include_once('class.ManageUsers.php');
@@ -16,8 +17,11 @@
     }else{
       $post_status=$post->uploadPost($post_title,$post_content,$userid,$upload_time);
       unset($_POST['post']);
+      print_r($_POST['post']);
     }
 
+  }else{
+    echo "post is not defined.";
   }
  ?>
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e6ffff;">
