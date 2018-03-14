@@ -1,5 +1,4 @@
 <?php
-
   if(isset($_POST['post'])){
     include_once('class.ManagePost.php');
     include_once('class.ManageUsers.php');
@@ -18,7 +17,6 @@
       $post_status=$post->uploadPost($post_title,$post_content,$userid,$upload_time);
       header("Refresh:0");
     }
-
   }
  ?>
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e6ffff;">
@@ -57,10 +55,8 @@
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
-</div>
-
+  </div>
 </nav>
-
 
 <div class="modal fade bd-example-modal-l" id="post" tabindex="-1" role="dialog" aria-labelledby="post-popup" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">

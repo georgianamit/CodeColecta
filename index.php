@@ -2,7 +2,6 @@
   include_once("includes/header.php");
   include_once("includes/navigation.php");
   include_once("includes/login_user.php");
-  session_start();
 ?>
 
 <?php if(!isset($_SESSION['username'])){ ?>

@@ -20,6 +20,7 @@ class ManageUsers
   }
 
   function loginUser($username,$password){
+    $password = md5($password);
     $query = $this->link->query("SELECT * FROM user WHERE username='$username' AND password='$password'");
     $rowcount = $query->rowCount();
     return $rowcount;

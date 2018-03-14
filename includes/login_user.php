@@ -36,7 +36,6 @@
             }
           }
         }
-
       }else{
         $signup_error = "Username already exists";
       }

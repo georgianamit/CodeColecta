@@ -23,15 +23,26 @@ class ManagePosts
 
   }
 
-  function getPostContent(){
-    $query=$this->link->query("SELECT * FROM post WHERE username = '$username'");
+  function getTrendingPost(){
+    $query=$this->link->query("SELECT * FROM post");
     $rowcount = $query->rowCount();
-    if($rowcount == 1){
+    if($rowcount != 0){
       $result=$query->fetchAll();
       return $result;
     }else{
       return $rowcount;
     }
   }
-}  
+
+  function getPostContent($userid){
+    $query=$this->link->query("SELECT * FROM post WHERE userid = '$userid'");
+    $rowcount = $query->rowCount();
+    if($rowcount != 0){
+      $result=$query->fetchAll();
+      return $result;
+    }else{
+      return $rowcount;
+    }
+  }
+}
 ?>
