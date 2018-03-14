@@ -1,7 +1,6 @@
 <?php
 
   if(isset($_POST['post'])){
-    print_r($_POST);
     include_once('class.ManagePost.php');
     include_once('class.ManageUsers.php');
     $post = new ManagePosts();
@@ -17,12 +16,9 @@
       $post_error = "You have to fill all the fields.";
     }else{
       $post_status=$post->uploadPost($post_title,$post_content,$userid,$upload_time);
-      $_POST = array();
-      print_r($_POST);
+      header("Refresh:0");
     }
 
-  }else{
-    echo "post is not defined.";
   }
  ?>
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e6ffff;">
