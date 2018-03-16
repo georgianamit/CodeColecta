@@ -68,6 +68,7 @@ $trending = $post->getTrendingPost();
                 </div>
                 <div class="col-sm-4">
                   <!-- username -->
+                  <?php echo $_SESSION['username']; ?>
                 </div>
                 <div class="col-sm-4">
                   <!-- time ago -->
