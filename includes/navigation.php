@@ -27,28 +27,28 @@
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <?php if(isset($_SESSION['username'])){ ?>
-    <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Profile</a>
-    </li>
-    <li class="nav-item">
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#post">Post</button>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <?php echo("Username");?>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">Score:<?="1234"?></a>
-        <a class="dropdown-item" href="#">Settings</a>
+    <ul class="navbar-nav mr-auto justify-content-end">
+      <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Profile</a>
+      </li>
+      <li class="nav-item">
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#post">Post</button>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <?php echo("Username");?>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Score:<?="1234"?></a>
+          <a class="dropdown-item" href="#">Settings</a>
 
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="includes/logout.php">Logout</a>
-        </div>
-    </li>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="includes/logout.php">Logout</a>
+          </div>
+      </li>
     </ul>
 <?php } ?>
     <form class="form-inline my-2 my-lg-0" style="float: right;">
