@@ -5,21 +5,22 @@
 ?>
 <div class="container" style="padding-top: 20px;">
    <div class="row" st>
-    <div class="col-sm-3 center-block" >
-        <div class="row">
+    <div class="col-sm-3 text-center" >
+        <div class="">
             <img src="images/pic.jpg" height="180px" width="180px" alt="...">
         </div>
-        <div class="row">
+        <div class="">
             <h4>Amit Rawat<br>
             <span style="color:grey;"><font size="4">(@spider)</font></span>
         </h4>
         </div>
         <div class="alert alert-success">
               <h5>User Details</h5>
+              <hr>
               <p>Data Analysts</p>
               <p>Data Scientist</p>
         </div>
-		<div class="row">
+		<div class="">
 		    <button type="button" class="btn btn-success">Follow</button>
         <button type="button" class="btn btn-info">Message</button>
 		</div>
@@ -58,22 +59,22 @@
 						  <!-- show menu (...) -->
 						  <p class="text-center">...</p>
 						</div>
-					  </div>
-					  <div class="row">
+					</div>
+					<div class="row">
 						<div class="col-sm-12" id="post-content">
 						  <!-- content -->
 						  <?php echo "sdhfiksdhfik ed ehfoieswhf k eed iew iew iewiedujedsw iew eiwiwesdisd wiueswdg fd iei ewi ewie wiewrfiwedgsdiwbgfi dsdudguedse"; ?>
 						</div>
+					</div>
+					<div class="row" style="border-bottom: 1px solid grey;">
+						<div class="col-sm-6" style="border-left: 1px solid grey;">
+						  <span class= "glyphicon glyphicon-arrow-up"></span><span class="badge"><?php echo "464"; ?></span>
 					  </div>
-					  <div class="row" style="border-bottom: 1px solid grey;">
-						<div class="col-sm-6">
-						  <span class= "glyphicon glyphicon-arrow-up"></span><span class="budge"><?php echo "464"; ?></span>
-						</div>
 						<div class="col-sm-6" style="border-left: 1px solid grey; border-right: 1px solid grey;">
-						  <span class="glyphicon glyphicon-arrow-down"></span><span class="budge"><?php echo "757"; ?></span>
+						  <span class="glyphicon glyphicon-arrow-down"></span><span class="badge"><?php echo "757"; ?></span>
 						</div>
-					  </div>
-          			</div>
+					</div>
+        </div>
 
 				<?php }?>
 

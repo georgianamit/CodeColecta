@@ -47,10 +47,10 @@ $trending = $post->getTrendingPost();
               </div>
               <div class="row" style="border-bottom: 1px solid grey;">
                 <div class="col-sm-6">
-                  <span class= "glyphicon glyphicon-arrow-up"></span><span class="budge"><?php echo $p['upvote']; ?></span>
+                  <span class= "glyphicon glyphicon-arrow-up"></span><span class="badge"><?php echo $p['upvote']; ?></span>
                 </div>
                 <div class="col-sm-6" style="border-left: 1px solid grey; border-right: 1px solid grey;">
-                  <span class="glyphicon glyphicon-arrow-down"></span><span class="budge"><?php echo $p['downvote']; ?></span>
+                  <span class="glyphicon glyphicon-arrow-down"></span><span class="badge"><?php echo $p['downvote']; ?></span>
                 </div>
               </div>
           </div>
