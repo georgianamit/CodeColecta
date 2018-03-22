@@ -1,7 +1,9 @@
 <?php
+  session_start();
   include_once("includes/header.php");
   include_once("includes/navigation.php");
   include_once("includes/login_user.php");
+
 ?>
 
 <?php if(!isset($_SESSION['username'])){ ?>
@@ -108,7 +110,12 @@
         </div>
     </div>
 <?php }else{
-  header("location: home.php");
+  //header("location: home.php");
+  ?>
+  <script type="text/javascript">
+    window.location="home.php";
+  </script>
+  <?php
 } ?>
 
 

@@ -32,7 +32,10 @@
           foreach ($make_sessions as $user_session) {
             $_SESSION['username'] = $user_session['username'];
             if(isset($_SESSION['username'])){
-              header("location: home.php");
+              //  header("location: home.php");?>
+
+              <script>window.location="home.php"</script>
+            <?php
             }
           }
         }
@@ -44,14 +47,12 @@
 
   // Sign in
   if(isset($_POST['signin'])){
-    session_start();
     include_once("class.ManageUsers.php");
     $user = new ManageUsers();
-
     $username = $_POST['signin-username'];
     // $email = $_POST['signin-email'];
     $password = $_POST['signin-password'];
-
+    print_r($_SESSION);
     if(empty($username) || empty($password)){
       $signin_error = "All fields are required.";
     }else{
@@ -59,9 +60,14 @@
       if($auth_user == 1){
         $make_sessions = $user->getUserInfo($username);
         foreach ($make_sessions as $user_session) {
+          
           $_SESSION['username'] = $user_session['username'];
+
           if(isset($_SESSION['username'])){
-            header("location: home.php");
+            //header("location: home.php");?>
+
+            <script>window.location="home.php"</script>
+      <?php
           }
         }
       }else{

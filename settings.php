@@ -8,14 +8,25 @@ include_once("includes/navigation.php");
       <div class="">
           <img src="images/pic.jpg" height="180px" width="180px" alt="...">
           <br><br>
-          <button type="button" name="update-pic" class="button button-info">Upload Pic</button>
-          <br>
+          <form>
+            <div class="form-group text-center">
+              <input type="file" class="form-control-file" >
+            </div>
+          </form>
+          <hr>
       </div>
-      <span><h3>Personal</h3></span>
+
+
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <span><h3>Personal</h3></span>
         <a class="nav-link in active" id="nav-profile-settings" data-toggle="pill" href="#profile-settings" role="tab" aria-controls="profile-settings" aria-selected="true">Profile</a>
         <a class="nav-link" id="nav-bio-settings" data-toggle="pill" href="#bio-settings" role="tab" aria-controls="bio-settings" aria-selected="false">Bio</a>
+        <hr>
+        <h3>Account</h3>
+        <a class="nav-link" id="nav-setting-settings" data-toggle="pill" href="#setting-settings" role="tab" aria-controls="setting-settings">Setting</a>
+        <a class="nav-link" id="nav-password-settings" data-toggle="pill" href="#password-settings" role="tab" aria-controls="bio-settings" aria-selected="false">Password</a>
       </div>
+
     </div>
     <div class="col-sm-9">
 
@@ -102,6 +113,52 @@ include_once("includes/navigation.php");
             <div class="form-group">
               <label for="about">Describe yourself</label>
               <textarea class="form-control" id="about" rows="5"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane fade" id="setting-settings" role="tabpanel" aria-labelledby="personal-settings">
+          <h3>Account Setting</h3>
+          <hr>
+          <form>
+            <div class="form-group">
+              <label for="username">Your Username</label>
+              <small id="username-define" class="form-text text-muted">(This is how users will see you on CodeColecta.)</small>
+              <input type="text" class="form-control" id="username" placeholder="Username">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label>Connected Accounts</label><br>
+              <button type="button" class="btn btn-primary">Connect to Facebook</button><br><br>
+              <button type="button" class="btn btn-secondary">Connect to Github</button><br><br>
+              <button type="button" class="btn btn-danger">Connect to Google+</button><br><br>
+              <button type="button" class="btn btn-info">Connect to LinkedIn</button><br><hr>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="language">Language</label>
+              <select id="language" class="form-control">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="delete-account">Delete Account</label>
+              <small id="username-define" class="form-text text-muted">Delete your account and all information related to your account such as your profile page, badges earned and leaderboard positions. Please be aware that all data will be permanently lost if you delete your account.</small>
+              <br>
+              <button type="button" class="btn btn-danger">Delete My Account</button><br><hr>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane fade" id="password-settings" role="tabpanel" aria-labelledby="personal-settings">
+          <h3>Password Setting</h3>
+          <hr>
+          <form>
+            <div class="form-group">
+              <label for="current-password">Current Password</label>
+              <input type="password" class="form-control" id="current-password" placeholder="Current Password">
+              <label for="new-password">New Password</label>
+              <input type="password" class="form-control" id="new-password" placeholder="New Password">
+              <label for="re-new-password">Rewrite New Password</label>
+              <input type="password" class="form-control" id="re-new-password" placeholder="Rewrite New Password">
             </div>
           </form>
         </div>

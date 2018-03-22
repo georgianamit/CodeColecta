@@ -9,6 +9,7 @@
 ?>
 <?php if(isset($_SESSION['username'])){ ?>
 <?php
+print_r($_SESSION);
 $userid = $user->getUserInfo($_SESSION['username']);
 $userid = $userid[0]['id'];
 $posts = $post->getPostContent($userid);
@@ -42,7 +43,7 @@ $trending = $post->getTrendingPost();
               <div class="row">
                 <div class="col-sm-12" id="post-content">
                   <!-- content -->
-                  <?php echo $p['post_content']; ?>
+                  <?php echo "<div>".$p['post_content']."</div>"?>
                 </div>
               </div>
               <div class="row" style="border-bottom: 1px solid grey;">
@@ -86,7 +87,11 @@ $trending = $post->getTrendingPost();
   </div>
 </div>
 <?php }else{
-  header("location: index.php");
+  //  header("location: index.php");?>
+  <script type="text/javascript">
+    window.location="index.php";
+  </script>
+  <?php
 } ?>
 
 <?php include_once("includes/footer.php"); ?>

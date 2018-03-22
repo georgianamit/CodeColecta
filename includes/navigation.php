@@ -1,12 +1,13 @@
 <?php
   if(isset($_POST['post'])){
+
     include_once('class.ManagePost.php');
     include_once('class.ManageUsers.php');
     $post = new ManagePosts();
     $user = new ManageUsers();
 
     $post_title = $_POST['post-title'];
-    $post_content = $_POST['post-content'];
+    $post_content = "<div>".$_POST['txtarea1']."</div>";
     $upload_time = date('Y-m-d h:i:s a', time());
     $userid = $user->getUserInfo($_SESSION['username']);
     $userid = $userid[0]['id'];
@@ -66,7 +67,7 @@
         echo "<div class='alert alert-danger'>$post_error</div>";
       }
       ?>
-      <div class="modal-header">
+     <div class="modal-header">
         <h5 class="modal-title" id="post">New Post</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -77,10 +78,14 @@
           <div class="form-group">
             <input type="text" name="post-title" class="form-control" id="recipient-name" placeholder="Title">
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
 
             <textarea class="form-control" name="post-content" id="message-text" placeholder="Content" rows="15"></textarea>
+          </div> -->
+          <div>
+            <textarea cols="80" id="txtarea1" name="txtarea1" class="ckeditor" rows="10" data-sample="1"></textarea>
           </div>
+          <br>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="submit" class="btn btn-success" name="post">Post</button>
         </form>
