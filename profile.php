@@ -70,6 +70,7 @@
 						<div class="col-sm-6" style="border-left: 1px solid grey;">
 						  <span class= "glyphicon glyphicon-arrow-up"></span><span class="badge"><?php echo "464"; ?></span>
 					  </div>
+            
 						<div class="col-sm-6" style="border-left: 1px solid grey; border-right: 1px solid grey;">
 						  <span class="glyphicon glyphicon-arrow-down"></span><span class="badge"><?php echo "757"; ?></span>
 						</div>
