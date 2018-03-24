@@ -15,8 +15,6 @@ include_once("includes/navigation.php");
           </form>
           <hr>
       </div>
-
-
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <span><h3>Personal</h3></span>
         <a class="nav-link in active" id="nav-profile-settings" data-toggle="pill" href="#profile-settings" role="tab" aria-controls="profile-settings" aria-selected="true">Profile</a>
