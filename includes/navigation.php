@@ -8,13 +8,13 @@
     $post_title = $_POST['post-title'];
     $post_content = "<div>".$_POST['txtarea1']."</div>";
     $upload_time = date('Y-m-d h:i:s a', time());
-    $userid = $user->getUserInfo($_SESSION['username']);
-    $userid = $userid[0]['id'];
+    $userid = $_SESSION['u_id'];
 
     if(empty($post_title) || empty($post_content)){
       $post_error = "You have to fill all the fields.";
     }else{
       $post_status=$post->uploadPost($post_title,$post_content,$userid,$upload_time);
+      unset($_POST);
       header("Refresh:0");
     }
   }
@@ -30,24 +30,27 @@
   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
-<?php if(isset($_SESSION['username'])){ ?>
+<?php if(isset($_SESSION['u_id'])){
+  include_once('class.ManageUsers.php');
+  $user = new ManageUsers();
+?>
     <ul class="navbar-nav justify-content-end">
       <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="home.php">Home</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="#">Profile</a>
+          <a class="nav-link" href="profile.php">Profile</a>
       </li>
       <li class="nav-item">
         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#post">Post</button>
       </li>
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <?php echo("Username");?>
+          <?php echo $user->getUsername($_SESSION['u_id']);?>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Score:<?="1234"?></a>
-          <a class="dropdown-item" href="#">Settings</a>
+          <a class="dropdown-item" href="settings.php">Settings</a>
 
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="includes/logout.php">Logout</a>
@@ -77,12 +80,11 @@
           <div class="form-group">
             <input type="text" name="post-title" class="form-control" id="recipient-name" placeholder="Title">
           </div>
-          <!-- <div class="form-group">
-
-            <textarea class="form-control" name="post-content" id="message-text" placeholder="Content" rows="15"></textarea>
-          </div> -->
           <div>
-            <textarea cols="80" id="txtarea1" name="txtarea1" class="ckeditor" rows="10" data-sample="1"></textarea>
+            <textarea id="froala-editor" name='txtarea1'></textarea>
+          </div>
+          <div>
+            <textarea class="ckeditor" name='txtarea1'></textarea>
           </div>
           <br>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

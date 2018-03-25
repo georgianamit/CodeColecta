@@ -7,11 +7,10 @@
   $post = new ManagePosts();
   $user = new ManageUsers();
 ?>
-<?php if(isset($_SESSION['username'])){ ?>
+<?php if(isset($_SESSION['u_id'])){ ?>
 <?php
-print_r($_SESSION);
-$userid = $user->getUserInfo($_SESSION['username']);
-$userid = $userid[0]['id'];
+$username = $user->getUsername($_SESSION['u_id']);
+$userid = $_SESSION['u_id'];
 $posts = $post->getPostContent($userid);
 $trending = $post->getTrendingPost();
 ?>
@@ -29,7 +28,7 @@ $trending = $post->getTrendingPost();
                 <div class="col-md-7">
                   <!-- title and time -->
                   <h5 id="post-title"><?php echo $p['post_title']; ?></h5>
-                  <h6 id="post-by"><?php echo $_SESSION['username']; ?></h6>
+                  <h6 id="post-by"><?php echo $username ?></h6>
                 </div>
                 <div class="col-md-2 text-center">
                   <!-- language -->
@@ -69,7 +68,7 @@ $trending = $post->getTrendingPost();
                 </div>
                 <div class="col-sm-4">
                   <!-- username -->
-                  <?php echo $_SESSION['username']; ?>
+                  <?php echo $username ?>
                 </div>
                 <div class="col-sm-4">
                   <!-- time ago -->
@@ -86,8 +85,7 @@ $trending = $post->getTrendingPost();
     </div>
   </div>
 </div>
-<?php }else{
-  //  header("location: index.php");?>
+<?php }else{ ?>
   <script type="text/javascript">
     window.location="index.php";
   </script>

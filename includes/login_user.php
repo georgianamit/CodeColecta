@@ -56,7 +56,7 @@
         $make_sessions = $user->getUserID($username);
         foreach ($make_sessions as $user_session) {
           $_SESSION['u_id'] = $user_session['u_id'];
-          if(isset($_SESSION['u_id'])){?>
+          if(isset($_SESSION['u_id'])){ print_r($_SESSION);?>
             <script>window.location="home.php"</script>
       <?php
           }

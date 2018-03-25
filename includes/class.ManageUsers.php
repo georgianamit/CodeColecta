@@ -41,7 +41,7 @@ class ManageUsers
   $rowcount = $query->rowCount();
   if($rowcount == 1){
     $result=$query->fetchAll();
-    return $result;
+    return $result[0]['username'];
   }else{
     return $rowcount;
   }
