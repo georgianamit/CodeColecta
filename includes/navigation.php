@@ -1,6 +1,5 @@
 <?php
   if(isset($_POST['post'])){
-
     include_once('class.ManagePost.php');
     include_once('class.ManageUsers.php');
     $post = new ManagePosts();

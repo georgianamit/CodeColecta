@@ -10,9 +10,9 @@ class ManageUsers
     $this->link=$db_connection->connect();
   }
 
-  function registerUser($username,$email,$password,$gender,$dob,$ip_address,$reg_date,$reg_time){
-    $query = $this->link->prepare("INSERT INTO user (username,email,password,gender,dob,ip_address,reg_date,reg_time) VALUES (?,?,?,?,?,?,?,?)");
-    $values = array($username,$email,$password,$gender,$dob,$ip_address,$reg_date,$reg_time);
+  function registerUser($username,$email,$password,$gender,$dob,$ip_address,$reg_date_time){
+    $query = $this->link->prepare("INSERT INTO user (username,email,password,gender,dob,ip_address,reg_date_time) VALUES (?,?,?,?,?,?,?)");
+    $values = array($username,$email,$password,$gender,$dob,$ip_address,$reg_date_time);
     $query->execute($values);
     $counts = $query->rowCount();
     return $counts;
@@ -35,6 +35,28 @@ class ManageUsers
       return $rowcount;
     }
   }
+
+  function getUsername($u_id){
+  $query=$this->link->query("SELECT username FROM user WHERE u_id = '$u_id'");
+  $rowcount = $query->rowCount();
+  if($rowcount == 1){
+    $result=$query->fetchAll();
+    return $result;
+  }else{
+    return $rowcount;
+  }
+}
+
+function getUserID($username){
+  $query=$this->link->query("SELECT u_id FROM user WHERE username = '$username'");
+  $rowcount = $query->rowCount();
+  if($rowcount == 1){
+    $result=$query->fetchAll();
+    return $result;
+  }else{
+    return $rowcount;
+  }
+}
 }
 
 

@@ -3,7 +3,6 @@
   include_once("includes/header.php");
   include_once("includes/navigation.php");
   include_once("includes/login_user.php");
-
 ?>
 
 <?php if(!isset($_SESSION['username'])){ ?>
@@ -109,14 +108,11 @@
             </div>
         </div>
     </div>
-<?php }else{
-  //header("location: home.php");
-  ?>
+<?php }else{ ?>
   <script type="text/javascript">
     window.location="home.php";
   </script>
-  <?php
-} ?>
+<?php } ?>
 
 
 <?php include_once("includes/footer.php"); ?>
