@@ -19,11 +19,11 @@ $trending = $post->getTrendingPost();
     <div class="col-sm-8">
       <?php foreach ($posts as $p){ ?>
         <div class="jumbotron">
-          <div class="row">
+          <!-- <div class="row"> -->
               <div class="row">
                 <div class="col-md-2">
                   <!-- Profile pic -->
-                  <img class="thumbnail pic-thumbnail" src="images/pic.jpg" alt="profile pic" />
+                  <img class="thumbnail pic-thumbnail" src="images/pic.png" alt="profile pic" />
                 </div>
                 <div class="col-md-7">
                   <!-- title and time -->
@@ -53,7 +53,7 @@ $trending = $post->getTrendingPost();
                   <span class="glyphicon glyphicon-arrow-down"></span><span class="badge"><?php echo $p['downvote']; ?></span>
                 </div>
               </div>
-          </div>
+          <!-- </div> -->
         </div>
       <?php } ?>
     </div>

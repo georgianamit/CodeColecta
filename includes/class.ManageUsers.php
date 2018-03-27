@@ -56,7 +56,15 @@ function getUserID($username){
   }else{
     return $rowcount;
   }
-}
+  }
+
+  function updateProfile($first_name,$last_name,$university,$branch,$course,$start_from,$till,$address,$city,$state,$zip,$country){
+    $query = $this->link->prepare("INSERT INTO user (first_name,last_name,university,branch,course,start_from,till,address,city,state,zip,country) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+    $values = array($first_name,$last_name,$university,$branch,$course,$start_from,$till,$address,$city,$state,$zip,$country);
+    $query->execute($values);
+    $counts = $query->rowCount();
+    return $counts;
+  }
 }
 
 

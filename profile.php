@@ -2,12 +2,14 @@
   session_start();
   include_once("includes/header.php");
   include_once("includes/navigation.php");
+  include_once("includes/class.ManageUsers.php");
+  $user = new ManageUsers();
 ?>
 <div class="container" style="padding-top: 20px;">
    <div class="row" st>
     <div class="col-sm-3 text-center" >
         <div class="">
-            <img src="images/pic.jpg" height="180px" width="180px" alt="...">
+            <img src="images/pic.png" height="180px" width="180px" alt="...">
         </div>
         <div class="">
             <h4>Amit Rawat<br>
@@ -47,7 +49,7 @@
 					<div class="row">
 						<div class="col-md-2">
 						  <!-- Profile pic -->
-						  <img class="thumbnail pic-thumbnail" src="images/pic.jpg" alt="profile pic" />
+						  <img class="thumbnail pic-thumbnail" src="images/pic.png" alt="profile pic" />
 						</div>
 						<div class="col-md-7">
 						  <!-- title and time -->

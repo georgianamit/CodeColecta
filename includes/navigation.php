@@ -81,9 +81,6 @@
             <input type="text" name="post-title" class="form-control" id="recipient-name" placeholder="Title">
           </div>
           <div>
-            <textarea id="froala-editor" name='txtarea1'></textarea>
-          </div>
-          <div>
             <textarea class="ckeditor" name='txtarea1'></textarea>
           </div>
           <br>
