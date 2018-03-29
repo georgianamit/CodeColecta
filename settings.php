@@ -12,7 +12,7 @@ $user = new ManageUsers();
       <div>
           <img src="images/pic.png" height="180px" width="180px" alt="...">
           <br><br>
-          <form>
+          <form method="post" action="">
             <div class="form-group text-center">
               <input type="file" class="form-control-file" ><br>
               <input class="btn btn-success btn-md"type="submit" value="Upload Image" name="upload-pic">
@@ -98,7 +98,7 @@ $user = new ManageUsers();
         <div class="tab-pane fade" id="bio-settings" role="tabpanel" aria-labelledby="personal-settings">
           <h3>Bio</h3>
           <hr>
-          <form>
+          <form method="post" action="">
             <div class="form-group">
               <label for="motto">Motto</label>
               <input type="text" class="form-control" id="motto" placeholder="CODING IS MY LIFE">
@@ -117,7 +117,7 @@ $user = new ManageUsers();
         <div class="tab-pane fade" id="setting-settings" role="tabpanel" aria-labelledby="personal-settings">
           <h3>Account Setting</h3>
           <hr>
-          <form>
+          <form method="post" action="">
             <div class="form-group">
               <label for="username">Your Username</label>
               <small id="username-define" class="form-text text-muted">(This is how users will see you on CodeColecta.)</small>
@@ -140,7 +140,7 @@ $user = new ManageUsers();
               <button type="button" class="btn btn-danger">Connect to Google+</button><br><br>
               <button type="button" class="btn btn-info">Connect to LinkedIn</button><br><hr>
             </div>
-            <form>
+            <form method="post" action="">
               <div class="form-group">
                 <label for="delete-account">Delete Account</label>
                 <small id="username-define" class="form-text text-muted">Delete your account and all information related to your account such as your profile page, badges earned and leaderboard positions. Please be aware that all data will be permanently lost if you delete your account.</small>
@@ -152,7 +152,7 @@ $user = new ManageUsers();
         <div class="tab-pane fade" id="password-settings" role="tabpanel" aria-labelledby="personal-settings">
           <h3>Password Setting</h3>
           <hr>
-          <form>
+          <form action="" method="post">
             <div class="form-group">
               <label for="current-password">Current Password</label>
               <input type="password" class="form-control" id="current-password" placeholder="Current Password">
