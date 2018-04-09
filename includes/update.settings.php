@@ -26,5 +26,12 @@ if(isset($_Post['update-profile'])){
   }
 }
 
+if (isset($_POST['upload-pic'])) {
+  $file = $_FILE['pic'];
+  if(!empty($file)){
+
+  }
+}
+
 
  ?>

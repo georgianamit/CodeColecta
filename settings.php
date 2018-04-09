@@ -14,7 +14,7 @@ $user = new ManageUsers();
           <br><br>
           <form method="post" action="">
             <div class="form-group text-center">
-              <input type="file" class="form-control-file" ><br>
+              <input type="file" name="pic" class="form-control-file" ><br>
               <input class="btn btn-success btn-md"type="submit" value="Upload Image" name="upload-pic">
             </div>
           </form>
