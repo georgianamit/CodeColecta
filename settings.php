@@ -92,7 +92,7 @@ $user = new ManageUsers();
                 <input type="text" class="form-control" id="country" name="country" placeholder="country">
               </div>
             </div>
-            <button type="submit" class="btn btn-primary" name="update-profile">Update Profile</button>
+            <input type="submit" class="btn btn-primary" name="update-profile">Update Profile</input>
           </form>
         </div>
         <div class="tab-pane fade" id="bio-settings" role="tabpanel" aria-labelledby="personal-settings">
@@ -111,7 +111,7 @@ $user = new ManageUsers();
               <label for="about">Describe yourself</label>
               <textarea class="form-control" id="about" rows="5"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" name="update-bio">Update Bio</button>
+            <input type="submit" class="btn btn-primary" name="update-bio">Update Bio</input>
           </form>
         </div>
         <div class="tab-pane fade" id="setting-settings" role="tabpanel" aria-labelledby="personal-settings">
@@ -142,10 +142,10 @@ $user = new ManageUsers();
             </div>
             <form method="post" action="">
               <div class="form-group">
-                <label for="delete-account">Delete Account</label>
+                <label>Delete Account</label>
                 <small id="username-define" class="form-text text-muted">Delete your account and all information related to your account such as your profile page, badges earned and leaderboard positions. Please be aware that all data will be permanently lost if you delete your account.</small>
                 <br>
-                <button type="button" class="btn btn-danger">Delete My Account</button><br><hr>
+                <input class="btn btn-danger" type="submit" name="delete-account" value="Update Password"><br><br>
               </div>
             </form>
         </div>

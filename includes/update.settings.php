@@ -33,5 +33,21 @@ if (isset($_POST['upload-pic'])) {
   }
 }
 
+if(isset($_POST['update-password'])){
+
+}
+
+if(isset($_POST['delete-account'])){
+
+}
+
+if(isset($_POST['update-username-language'])){
+
+}
+
+if(isset($_POST['update-bio'])){
+  
+}
+
 
  ?>
