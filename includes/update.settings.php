@@ -45,8 +45,9 @@ if(isset($_POST['update-username-language'])){
 
 }
 
+
 if(isset($_POST['update-bio'])){
-  
+
 }
 
 
