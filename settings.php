@@ -101,15 +101,15 @@ $user = new ManageUsers();
           <form method="post" action="">
             <div class="form-group">
               <label for="motto">Motto</label>
-              <input type="text" class="form-control" id="motto" placeholder="CODING IS MY LIFE">
+              <input type="text" class="form-control" id="motto" name="motto" placeholder="CODING IS MY LIFE">
             </div>
             <div class="form-group">
               <label for="website">Website</label>
-              <input type="text" class="form-control" id="website" placeholder="http://www.spiderlabweb.com">
+              <input type="text" class="form-control" id="website" name="website" placeholder="http://www.spiderlabweb.com">
             </div>
             <div class="form-group">
               <label for="about">Describe yourself</label>
-              <textarea class="form-control" id="about" rows="5"></textarea>
+              <textarea class="form-control" id="about" name="about" rows="5"></textarea>
             </div>
             <input type="submit" class="btn btn-primary" name="update-bio">Update Bio</input>
           </form>
@@ -121,11 +121,11 @@ $user = new ManageUsers();
             <div class="form-group">
               <label for="username">Your Username</label>
               <small id="username-define" class="form-text text-muted">(This is how users will see you on CodeColecta.)</small>
-              <input type="text" class="form-control" id="username" placeholder="Username">
+              <input type="text" class="form-control" id="username" name="username" placeholder="Username">
             </div>
             <div class="form-group col-md-3">
               <label for="language">Language</label>
-              <select id="language" class="form-control">
+              <select id="language" name="language" class="form-control">
                 <option selected>Choose...</option>
                 <option>...</option>
               </select>
@@ -145,7 +145,7 @@ $user = new ManageUsers();
                 <label>Delete Account</label>
                 <small id="username-define" class="form-text text-muted">Delete your account and all information related to your account such as your profile page, badges earned and leaderboard positions. Please be aware that all data will be permanently lost if you delete your account.</small>
                 <br>
-                <input class="btn btn-danger" type="submit" name="delete-account" value="Update Password"><br><br>
+                <input class="btn btn-danger" type="submit" name="delete-account" value="Delete my account"><br><br>
               </div>
             </form>
         </div>
@@ -155,11 +155,11 @@ $user = new ManageUsers();
           <form action="" method="post">
             <div class="form-group">
               <label for="current-password">Current Password</label>
-              <input type="password" class="form-control" id="current-password" placeholder="Current Password">
+              <input type="password" class="form-control" id="current-password" name="current-password" placeholder="Current Password">
               <label for="new-password">New Password</label>
-              <input type="password" class="form-control" id="new-password" placeholder="New Password">
+              <input type="password" class="form-control" id="new-password" name="new-password" placeholder="New Password">
               <label for="re-new-password">Rewrite New Password</label>
-              <input type="password" class="form-control" id="re-new-password" placeholder="Rewrite New Password">
+              <input type="password" class="form-control" id="re-new-password" name="re-new-password" placeholder="Rewrite New Password">
               <br>
               <input class="btn btn-primary" type="submit" name="update-password" value="Update Password">
             </div>

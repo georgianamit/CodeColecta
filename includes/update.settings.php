@@ -34,7 +34,7 @@ if (isset($_POST['upload-pic'])) {
 }
 
 if(isset($_POST['update-password'])){
-
+  
 }
 
 if(isset($_POST['delete-account'])){
